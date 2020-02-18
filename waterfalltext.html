@@ -1,0 +1,201 @@
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>ikbs</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.0.js"></script>
+       
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body id='test'>
+      
+    
+    <br/>
+    <br/>
+    <br/>
+    <br/>  <br/>
+
+    <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>  <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>  <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>  <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>  <br/>
+      <br/>
+      <div id='test' class = 'container'>
+            <h4 class="ml13">The setAttribute() method adds the specified attribute to an element, and gives it the specified value.
+
+                    If the specified attribute already exists, only the value is set/changed.
+                    
+                    Note: Although it is possible to add the style attribute with a value to an element with this method, it is recommended that you use properties of the Style object instead for inline styling, because this will not overwrite other CSS properties that may be specified in the style attribute:</h4>
+                    
+
+    </div>
+      <div class="some-item" aos="fade" aos-duration="500">Example Element</div>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      
+      <br/>
+      <br/>
+      <br/>
+    
+       
+</body>
+
+
+
+
+</html>
+    <script>
+  
+
+
+window.addEventListener("scroll",function(event){
+    console.log(event)
+    console.log(document.body.scrollTop)
+    console.log(document.getElementById('test').scrollTop)
+if(document.body.scrollTop > 100 || document.getElementById('test').scrollTop > 100){
+    var status = false;
+    var textWrapper = document.querySelector('.ml13');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: false})
+  .add({
+    targets: '.ml13 .letter',
+    translateY: [100,0],
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 1400,
+    delay: (el, i) => 300 + 2 * i
+  })
+
+
+
+    }
+})
+  AOS.init();
+
+    </script>
+
+    <style>
+ .ml13 {
+
+ 
+}
+
+.ml13 .letter {
+  display: inline-block;
+  
+}
+
+.container{
+width:50%;
+margin:0px;
+display:flex;
+
+}
+
+
+body { text-align: center; background: #48cfad; color: #fff; }
+a {color: #fff; text-transform: uppercase; border-bottom: 1px dotted #fff; -webkit-transition: all 100ms ease-out; transition: all 100ms ease-out; text-decoration: none; }
+.block { width: 31.33%; margin: 1%; float: left; }
+a:hover { border-bottom: 1px solid; }
+h3 { margin-top: 850px; }
+.marged { margin-top: 100px;} 
+
+
+.revealOnScroll { opacity: 0; }
+
+.image {
+  width: 100%; height: 200px; position: relative; display: block; background-color: #48cfad; opacity: 0.8; -webkit-transition: all 400ms ease; transition: all 400ms ease;
+  background-image: url('http://lorempixel.com/400/200/');
+  -webkit-background-size: cover; background-size: cover;
+}
+  </style>

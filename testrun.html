@@ -1,0 +1,164 @@
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>ikbs</title>
+</head>
+<body>
+        <div class = "container">
+                <div class = "section">
+                <div class = 'mainPictures'>
+                    <div class = 'first'>
+                        <img src ="1.jpg">
+                    </div>
+                    <div class = 'second'>
+                        <img src ="2.jpg">
+                    </div>
+                    <div class = 'third'>
+                        <img src ="3.jpg">
+                    </div>
+            
+                </div>       
+                <div class = 'mainText'>
+                    <div class = 'girl'>
+                        <p>Girl  </p>
+                    </div>
+                    <div class = 'heart'>
+                        <p>Heart  </p>
+                    </div>
+                    <div class = 'showman'>
+                        <p>Showman  </p>
+                    </div>
+                 
+                   
+                   
+                </div>
+            </div>
+            </div>
+</body>
+</html>
+    <script>
+        window.addEventListener('load', function () {
+            document.getElementsByClassName('first')[0].classList.add("showThePicture");
+
+      document.getElementsByClassName('girl')[0].addEventListener('click',function(event){
+            document.getElementsByClassName('first')[0].classList.add("showThePicture");
+            document.getElementsByClassName('second')[0].classList.remove("showThePicture");
+            document.getElementsByClassName('third')[0].classList.remove("showThePicture");
+            document.getElementsByClassName('mainText')[0].classList.add("girlMove");
+            document.getElementsByClassName('mainText')[0].classList.remove("heartMove");
+            document.getElementsByClassName('mainText')[0].classList.remove("snowmanMove");
+        },false);
+        document.getElementsByClassName('heart')[0].addEventListener('click',function(event){
+            document.getElementsByClassName('first')[0].classList.remove("showThePicture");
+            document.getElementsByClassName('second')[0].classList.add("showThePicture");
+            document.getElementsByClassName('third')[0].classList.remove("showThePicture");
+            document.getElementsByClassName('mainText')[0].classList.remove("heartMove");
+            document.getElementsByClassName('mainText')[0].classList.add("heartMove");
+            document.getElementsByClassName('mainText')[0].classList.remove("snowmanMove");
+        },false);
+        document.getElementsByClassName('showman')[0].addEventListener('click',function(event){
+            document.getElementsByClassName('first')[0].classList.remove("showThePicture");
+            document.getElementsByClassName('second')[0].classList.remove("showThePicture");
+            document.getElementsByClassName('third')[0].classList.add("showThePicture");
+            document.getElementsByClassName('mainText')[0].classList.remove("snowmanMove");
+            document.getElementsByClassName('mainText')[0].classList.remove("heartMove");
+            document.getElementsByClassName('mainText')[0].classList.add("snowmanMove");
+        },false)
+    },false)  
+    </script>
+
+    <style>
+    .container{
+       
+    display:flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-size:60px;
+
+}
+.section{
+    border:1px solid;
+position: relative;
+width:800px;
+height:600px;
+overflow: hidden;
+}
+.mainPictures{
+    position:absolute;
+    margin:0px;
+right:0px;
+top:0px;
+border:1px solid;
+
+
+
+}
+.first{
+    animation-name: animatetop;
+  animation-duration: 2s;
+    display:none;
+    
+}
+.second{
+    animation-name: animatetop;
+  animation-duration: 2s;
+display:none;
+}
+.third{
+    display:none;
+    animation-name: animatetop;
+  animation-duration: 2s;
+}
+.mainText{
+    display: flex;
+    border:1px solid;
+       position:absolute;
+       left:20px;
+top:0px;
+overflow:hidden;
+}
+.girl{
+margin-right:10px;
+}
+.heart{
+margin-right:10px;
+}
+.snowman{
+margin-right:10px;
+}
+.showThePicture{
+    display:flex;
+   
+}
+.girlMove{
+    transition: 2s;
+    transform: translateX(0%);
+}
+
+.heartMove{
+    transition: 2s;
+    transform: translateX(-10%);
+}
+
+.snowmanMove{
+    transition: 2s;
+    transform: translateX(-20%);
+}
+
+
+
+@-webkit-keyframes animatetop {
+    0% { opacity:0.2;} 
+    100% { opacity:1; }
+    
+}
+
+@keyframes animatetop {
+    0% { opacity:0.2;} 
+    100% { opacity:1; }
+    
+}
+
+    </style>
