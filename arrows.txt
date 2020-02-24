@@ -1,0 +1,37 @@
+  jQuery( window ).on( "load", function() {
+document.getElementsByClassName('sppb-carousel-extended-dot-indicator')[0].classList.add('first_dots');
+document.getElementsByClassName('sppb-carousel-extended-dot-indicator')[1].classList.add('second_dots');
+document.getElementsByClassName('sppb-carousel-extended-dot-indicator')[2].classList.add('third_dots');
+document.getElementsByClassName('sppb-carousel-extended-dot-indicator')[3].classList.add('forth_dots');
+});
+
+.first_dots{
+background:url('joomla_black.png') !important;
+}
+.second_dots{
+background:url('powered_by.png') !important;;
+}
+.third_dots{
+background:url('joomla_black.png') !important;;
+}
+.forth_dots{
+background:url('powered_by.png') !important;;
+}
+.sppb-carousel-extended-dots ul li {
+background:transparent;
+position:absolute;
+}
+
+arrows
+
+.nextArrow{
+background: url('joomla_black.png') no-repeat !important;
+}
+
+ jQuery( window ).on( "load", function() {
+
+jQuery("#sppb-addon-1582559082132 > div > div.sppb-carousel-extended-nav-control > span.next-control.nav-control" ).addClass('nextArrow');
+jQuery("#sppb-addon-1582559082132 > div > div.sppb-carousel-extended-nav-control > span.next-control.nav-control > i" ).removeClass('fa');
+jQuery("#sppb-addon-1582559082132 > div > div.sppb-carousel-extended-nav-control > span.next-control.nav-control > i" ).removeClass('fa-angle-right');
+jQuery("#sppb-addon-1582559082132 > div > div.sppb-carousel-extended-nav-control > span.next-control.nav-control" ).addClass('nextArrow');
+});
